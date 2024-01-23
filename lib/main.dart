@@ -1,4 +1,5 @@
 import 'package:chat_app/screens/forgot_password.dart';
+import 'package:chat_app/screens/homepage.dart';
 import 'package:chat_app/screens/landing_page.dart';
 import 'package:chat_app/screens/login_page.dart';
 import 'package:chat_app/screens/reset_password.dart';
@@ -38,6 +39,7 @@ class _ChatAppState extends State<ChatApp> {
               '/verify_otp' :(context) => const VerifyOTP(),
               '/reset_password' :(context) => const ResetPassword(),
               '/sign_up' :(context) => const SignUp(),
+              '/home' :(context) => const HomePage(),
             },
           );
         }

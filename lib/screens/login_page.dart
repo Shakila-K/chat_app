@@ -150,7 +150,9 @@ import 'package:flutter/material.dart';
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/home');
+                  }, 
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
