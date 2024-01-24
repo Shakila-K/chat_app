@@ -6,6 +6,7 @@ import 'package:chat_app/screens/reset_password.dart';
 import 'package:chat_app/screens/sign_up.dart';
 import 'package:chat_app/screens/verify_otp.dart';
 import 'package:chat_app/utilities/theme_data.dart';
+import 'package:chat_app/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 void main() {

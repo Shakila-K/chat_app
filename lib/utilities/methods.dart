@@ -1,10 +1,17 @@
 class DateTimeMethods {
-  String extractDate(DateTime dateTime){
-    return '${dateTime.year}-${dateTime.month}-${dateTime.day}';
-  }
+  String extractDate(DateTime dateTime) {
+  String year = dateTime.year.toString();
+  String month = dateTime.month.toString().padLeft(2, '0');
+  String day = dateTime.day.toString().padLeft(2, '0');
+  return '$year-$month-$day';
+}
+
 
   String extractTime(DateTime dateTime){
-    return '${dateTime.hour}:${dateTime.minute==0?'00':dateTime.minute}';
+    String hour = dateTime.hour.toString().padLeft(2, '0');
+    String minute = dateTime.minute.toString().padLeft(2, '0');
+
+    return '$hour:$minute';
   }
 
   String titleDateTime(DateTime dateTime){
