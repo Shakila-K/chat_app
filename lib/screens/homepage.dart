@@ -1,5 +1,6 @@
 import 'package:chat_app/utilities/theme_data.dart';
 import 'package:chat_app/widgets/chats.dart';
+import 'package:chat_app/widgets/settings.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   final bodies = [
     const Text('People',   style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
     Chats(),
-    const Text('Settings', style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
+    Settings(),
   ];
   @override
   Widget build(BuildContext context) {
