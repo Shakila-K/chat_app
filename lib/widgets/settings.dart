@@ -1,5 +1,6 @@
 import 'package:chat_app/utilities/theme_data.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -15,12 +16,13 @@ class _SettingsState extends State<Settings> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          SizedBox(height: ScreenSize().getScreenHeight(context)*0.02),
           Container(
             width: ScreenSize().getScreenWidth(context)*0.9,
-            padding: EdgeInsets.symmetric(horizontal: ScreenSize().getScreenWidth(context)*0.05, vertical: ScreenSize().getScreenHeight(context)*0.02),
+            padding: EdgeInsets.symmetric(horizontal: ScreenSize().getScreenWidth(context)*0.05, vertical: ScreenSize().getScreenHeight(context)*0.01),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).canvasColor,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,8 +41,26 @@ class _SettingsState extends State<Settings> {
                 IconButton(onPressed: (){}, icon: const Icon(Icons.edit),)
               ],
             ),
+          ),
+          SizedBox(height: ScreenSize().getScreenHeight(context)*0.02),
+          Container(
+            width: ScreenSize().getScreenWidth(context)*0.9,
+            padding: EdgeInsets.symmetric(horizontal: ScreenSize().getScreenWidth(context)*0.05, vertical: ScreenSize().getScreenHeight(context)*0.02),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: Theme.of(context).primaryColor)
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Dark mode : '),
+                
+                IconButton(onPressed: (){
+                  Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                }, icon: const Icon(Icons.edit),)
+              ],
+            ),
           )
-      
       
         ],
       ),

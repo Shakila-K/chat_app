@@ -14,9 +14,9 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 1;
 
   final appbar_title = [
-    const Text('People',   style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
-    const Text('Chats' ,   style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
-    const Text('Settings', style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
+    const Text('People'),
+    const Text('Chats'),
+    const Text('Settings'),
   ];
 
   final bodies = [

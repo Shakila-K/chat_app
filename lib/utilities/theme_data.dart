@@ -3,12 +3,31 @@ import 'package:flutter/material.dart';
 
 // Dark theme color data
 final ThemeData darkTheme = ThemeData.dark().copyWith(
-
+  
 );
 
 // Light theme color data
 final ThemeData lightTheme = ThemeData.light().copyWith(
-  primaryColor: Colors.black54
+
+  appBarTheme: const AppBarTheme(
+    backgroundColor: Color.fromARGB(255, 240, 240, 241),
+    elevation: 0.0,
+    titleTextStyle: TextStyle(
+      color: Colors.black,
+      fontSize: 28.0,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+
+  scaffoldBackgroundColor: const Color.fromARGB(255, 240, 240, 241),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    backgroundColor: Color.fromARGB(255, 240, 240, 241),
+    selectedItemColor: Color.fromARGB(255, 7, 104, 247),
+    unselectedItemColor: Colors.black,
+    showUnselectedLabels: true,
+  ),
+  
+  canvasColor: Colors.white,
 );
 
 // Theme Provider with the toggle theme function
